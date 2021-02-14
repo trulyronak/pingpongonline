@@ -1,0 +1,112 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.wrapper {
+  display: table;
+  margin: 0 auto;
+}
+#play-match {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  background-color: blue;
+  z-index: 10000000;
+  color: white;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.input-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#scorebox {
+  display: hidden;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  background-color: blue;
+  width: 300px;
+  color: white;
+}
+#scorebox > .player-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+/* Snackbar */
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+#splash-box {
+  background-color: red;
+  width: 40vw;
+  height: 30vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  display: none;
+}

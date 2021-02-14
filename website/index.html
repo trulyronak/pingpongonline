@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="images/favicon.svg">
+    <title>Table Tennis 3D</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div><div id="play-match">
+      <div class="input-row">
+        <p>Room Name: </p>
+        <input id="room-name" value="pogchamps">
+      </div>
+      <br>
+      <div class="input-row">
+        <p>Player Name: </p>
+        <input id="player-name">
+      </div>
+      <button id="join-room-button">Join Room</button>
+    </div>
+    <div id="scorebox">
+      <div class="player-box">
+        <p id="player-name-label">Player</p>
+        <p id="player-score"><b>0</b></p>
+      </div>
+      <div class="player-box">
+        <p id="opponent-name">Opponent</p>
+        <p id="opponent-score"><b>0</b></p>
+      </div>
+    </div></div>
+    <div id="splash-box">
+      
+    </div>
+
+    <div class="wrapper">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+    <div id="snackbar">Some text some message..</div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/build/app.js" charset="utf-8"></script>
+  </body>
+</html>
